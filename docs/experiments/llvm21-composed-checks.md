@@ -1,5 +1,8 @@
 # LLVM 21 composed-primitive validation
 
+Update: [the discarded-half proof now makes slots 41–42 pass](llvm21-discarded-half.md).
+The table below preserves the original pre-fix results.
+
 At CuMetal `1e3c01e`, three entries numerically pass on Apple M5 and two fail
 register-definedness import before GPU execution.
 [Per-entry logs, timings, and hashes](llvm21-composed-checks.json).

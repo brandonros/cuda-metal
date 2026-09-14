@@ -12,6 +12,9 @@ Recent experiment: [LLVM 21 compressed secp256k1 passes on Apple M5](docs/experi
 with regression coverage for conditional-load guards. The [uncompressed sibling and
 eight Ethereum/Bitcoin checks](docs/experiments/llvm21-address-checks.md) also pass.
 
+[Two LLVM 21 Base58 checks now pass](docs/experiments/llvm21-discarded-half.md)
+after adding a bounded proof for discarded tuple halves.
+
 ## Install
 
 Requires Apple Silicon and macOS 14 or newer. See the

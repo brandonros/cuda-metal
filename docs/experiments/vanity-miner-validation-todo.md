@@ -10,8 +10,9 @@ individually on M5, with other slots and guards intact.
 [All three LLVM 21 Shallenge checks, slots 25–27, also pass](llvm21-shallenge-checks.md).
 [All three hash comparisons, slots 28–30, also pass](llvm21-hash-comparison-checks.md).
 [All ten arithmetic checks, slots 31–40, also pass](llvm21-arithmetic-checks.md).
-[Composed-primitive batch: slots 43–45 pass; 41–42 fail import](llvm21-composed-checks.md).
-Next fix: prove the unused low half of a packed value is unobservable before SSA.
+[The discarded-half proof now unblocks slots 41–42](llvm21-discarded-half.md),
+so all five composed fixtures (41–45) have passed individually.
+Next bounded batch: tier-2 arithmetic checks, slots 46–56.
 No complete LLVM 21 suite or mining validation is claimed.
 
 Goal: run all vanity-miner self-tests and all four mining kernels correctly on

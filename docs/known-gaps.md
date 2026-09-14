@@ -7,6 +7,10 @@ LLVM 21 miner coverage remains partial: [compressed secp256k1 now passes](experi
 with bounded equality/OR guard proofs. [The uncompressed sibling and eight address checks](experiments/llvm21-address-checks.md)
 also pass; the full suite and mining workloads are still unvalidated. Arbitrary predicate implications remain unsupported.
 
+[Discarded tuple halves](experiments/llvm21-discarded-half.md) are handled for
+single-consumer, same-block pack/extract pairs with unchanged selected sources.
+More general partial-value definedness remains unsupported.
+
 ## Gap groups
 
 - [Platform and legal boundaries](known-gaps/platform.md)

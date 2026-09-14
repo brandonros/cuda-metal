@@ -1,0 +1,75 @@
+{
+  "ptx": {
+    "path": "/Users/brandon/Downloads/vanity-miner-aarch64-llvm21/output-llvm21.ptx",
+    "bytes": 25161784,
+    "sha256": "2840485fe193d39cfdbb2e5babd25f6772a08a2550843c20b3beba5a26185f4b"
+  },
+  "compiler": {
+    "path": "/Users/brandon/Desktop/gpu/cuda-metal/build-rust-ptx-apple/cumetalc",
+    "bytes": 3222704,
+    "sha256": "519cc2eb4b35fa6df093ae89e373170c4fae4d59e5cf39923c09ef0ffc7d4347"
+  },
+  "runtime": {
+    "path": "/Users/brandon/Desktop/gpu/cuda-metal/build-rust-ptx-apple/libcumetal.dylib",
+    "bytes": 5004992,
+    "sha256": "6e41295ad0d934f15b70bfa7d12a9c93b74f5852d947e07eff130d78a824f30f"
+  },
+  "results": [
+    {
+      "slot": 41,
+      "entry": "kernel_self_test_base58_var_len",
+      "compile": {
+        "exit_code": 0,
+        "host_seconds": 79.147,
+        "log": "wrote \"/tmp/llvm21-discarded-half-validation/kernel_self_test_base58_var_len.metal\"\n"
+      },
+      "metal": {
+        "path": "/private/tmp/llvm21-discarded-half-validation/kernel_self_test_base58_var_len.metal",
+        "bytes": 630013,
+        "sha256": "08bc92f5502ddd3828d967f22f40017496d0c1c857eb8e26a143387ee6c34de9"
+      },
+      "runtime": {
+        "exit_code": 0,
+        "host_seconds": 3.652,
+        "log": "CUMETAL_PROVENANCE event=kernel_launch kernel=\"kernel_self_test_base58_var_len\" source=generic_ptx provenance=generic_ptx_lowering semantic_quality=exact device=apple_gpu device_name=\"Apple M5\" math_mode=safe compile_cache_hit=false launch_success=true duration_ns=147625 grid=(1,1,1) block=(1,1,1) unsupported_reason=\"\"\nNUMERICAL_PASS kernel=kernel_self_test_base58_var_len slot=41 actual=1 expected=1; other 117 slots and 16 guard words intact\n"
+      },
+      "gpu_duration_ns": 147625
+    },
+    {
+      "slot": 42,
+      "entry": "kernel_self_test_base58_var_len_leading_zero",
+      "compile": {
+        "exit_code": 0,
+        "host_seconds": 78.016,
+        "log": "wrote \"/tmp/llvm21-discarded-half-validation/kernel_self_test_base58_var_len_leading_zero.metal\"\n"
+      },
+      "metal": {
+        "path": "/private/tmp/llvm21-discarded-half-validation/kernel_self_test_base58_var_len_leading_zero.metal",
+        "bytes": 604615,
+        "sha256": "8f1f9d4a971b218c06ae6b1168ac9e2d87acd8f978aab3b500c2da6c78dda962"
+      },
+      "runtime": {
+        "exit_code": 0,
+        "host_seconds": 3.052,
+        "log": "CUMETAL_PROVENANCE event=kernel_launch kernel=\"kernel_self_test_base58_var_len_leading_zero\" source=generic_ptx provenance=generic_ptx_lowering semantic_quality=exact device=apple_gpu device_name=\"Apple M5\" math_mode=safe compile_cache_hit=false launch_success=true duration_ns=142000 grid=(1,1,1) block=(1,1,1) unsupported_reason=\"\"\nNUMERICAL_PASS kernel=kernel_self_test_base58_var_len_leading_zero slot=42 actual=1 expected=1; other 117 slots and 16 guard words intact\n"
+      },
+      "gpu_duration_ns": 142000
+    }
+  ],
+  "base_commit": "4a91be4e958536353eeac7d8e89bb89437fc1a7b",
+  "fix_commit": "da434ab21e9102041fcb8f58d1954790b9d0dcd9",
+  "ptx_modified": false,
+  "metal_instrumented": false,
+  "workload_specializations": false,
+  "device": "Apple M5",
+  "compile_workers": 2,
+  "gpu_launches": "sequential",
+  "compile_timeout_seconds": 600,
+  "runtime_timeout_seconds": 300,
+  "unit_log": "PTX -> CuMetal IR -> typed MSL tests passed\n",
+  "gpu_regression_inputs": {
+    "discarded_low_half": 65541,
+    "discarded_high_half": 65541
+  },
+  "targeted_gpu_tests_passed": 6
+}

@@ -524,3 +524,13 @@ extracts the high half. Compiler/runtime/PTX hashes and branch commit remained
 unchanged throughout validation. [Evidence and next proof](llvm21-composed-checks.md).
 Next: regression-tested discarded-half handling before SSA; original PTX stays
 unchanged. Full-suite and mining validation remain incomplete.
+
+## LLVM 21 discarded tuple half
+
+`da434ab` removes a pack used only by a same-block single-half extraction when
+the selected source remains unchanged. Both original Base58 entries (41–42) now
+compile and numerically pass, with other slots and guards intact. Full unit and
+six targeted GPU regression tests pass, including 131,082 new runtime inputs.
+[Proof, negative coverage, and evidence](llvm21-discarded-half.md). PTX is unchanged.
+Next bounded batch: tier-2 arithmetic (46–56); full-suite/mining validation remains
+incomplete.
