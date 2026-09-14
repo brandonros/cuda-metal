@@ -543,3 +543,15 @@ changes were needed, and the branch/compiler/runtime/PTX hashes stayed unchanged
 [Evidence and fixed-fixture scope](llvm21-tier2-arithmetic-checks.md).
 Next bounded batch: identity and Base58/iteration checks (57–62). Full-suite and
 mining validation remain incomplete.
+
+## LLVM 21 identity and iteration validation
+
+Slots 57–62 all compile and numerically pass on M5 at `e0f1698`, with other slots
+and 16 guards intact. No compiler changes; branch/compiler/runtime/PTX hashes
+remained unchanged. [Batch evidence](llvm21-identity-iteration-checks.md).
+
+[Reconciled inventory](llvm21-validation-inventory.md): 54/118 numerical entries
+have cumulative passing evidence, 64 remain unvalidated, the separate probe
+passes, and all four mining kernels remain unvalidated end to end. No recorded
+LLVM 21 failure remains unresolved after later retests. A final full sweep and
+broader runtime-input/integration coverage are still required.

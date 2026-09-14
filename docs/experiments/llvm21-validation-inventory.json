@@ -1,0 +1,836 @@
+{
+  "ptx_sha256": "2840485fe193d39cfdbb2e5babd25f6772a08a2550843c20b3beba5a26185f4b",
+  "scope": "Cumulative recorded passes across CuMetal revisions; not a full run on one compiler revision",
+  "numerical_tests": 118,
+  "numerical_passes": 54,
+  "unvalidated_numerical_tests": 64,
+  "unresolved_recorded_failures": [],
+  "probe_pass": true,
+  "probe_evidence": [
+    "llvm21-miner-smoke.json"
+  ],
+  "mining_kernels_unvalidated": [
+    "kernel_find_better_shallenge_nonce",
+    "kernel_find_bitcoin_vanity_private_key",
+    "kernel_find_ethereum_vanity_private_key",
+    "kernel_find_solana_vanity_private_key"
+  ],
+  "slots": [
+    {
+      "slot": 0,
+      "entry": "kernel_self_test_primitive_xoroshiro",
+      "status": "unvalidated",
+      "evidence": []
+    },
+    {
+      "slot": 1,
+      "entry": "kernel_self_test_primitive_sha512",
+      "status": "numerical_pass",
+      "evidence": [
+        "llvm21-miner-smoke.json"
+      ]
+    },
+    {
+      "slot": 2,
+      "entry": "kernel_self_test_primitive_ed25519",
+      "status": "numerical_pass",
+      "evidence": [
+        "llvm21-loop-definedness.json"
+      ]
+    },
+    {
+      "slot": 3,
+      "entry": "kernel_self_test_primitive_base58",
+      "status": "unvalidated",
+      "evidence": []
+    },
+    {
+      "slot": 4,
+      "entry": "kernel_self_test_primitive_secp256k1_compressed",
+      "status": "numerical_pass",
+      "evidence": [
+        "llvm21-guarded-load.json"
+      ]
+    },
+    {
+      "slot": 5,
+      "entry": "kernel_self_test_primitive_secp256k1_uncompressed",
+      "status": "numerical_pass",
+      "evidence": [
+        "llvm21-address-checks.json"
+      ]
+    },
+    {
+      "slot": 6,
+      "entry": "kernel_self_test_primitive_keccak256",
+      "status": "unvalidated",
+      "evidence": []
+    },
+    {
+      "slot": 7,
+      "entry": "kernel_self_test_primitive_ripemd160",
+      "status": "unvalidated",
+      "evidence": []
+    },
+    {
+      "slot": 8,
+      "entry": "kernel_self_test_primitive_sha256_32",
+      "status": "unvalidated",
+      "evidence": []
+    },
+    {
+      "slot": 9,
+      "entry": "kernel_self_test_primitive_sha256_variable",
+      "status": "unvalidated",
+      "evidence": []
+    },
+    {
+      "slot": 10,
+      "entry": "kernel_self_test_solana_priv",
+      "status": "unvalidated",
+      "evidence": []
+    },
+    {
+      "slot": 11,
+      "entry": "kernel_self_test_solana_pub",
+      "status": "unvalidated",
+      "evidence": []
+    },
+    {
+      "slot": 12,
+      "entry": "kernel_self_test_solana_encoded",
+      "status": "unvalidated",
+      "evidence": []
+    },
+    {
+      "slot": 13,
+      "entry": "kernel_self_test_ethereum_priv",
+      "status": "numerical_pass",
+      "evidence": [
+        "llvm21-address-checks.json"
+      ]
+    },
+    {
+      "slot": 14,
+      "entry": "kernel_self_test_ethereum_pub",
+      "status": "numerical_pass",
+      "evidence": [
+        "llvm21-address-checks.json"
+      ]
+    },
+    {
+      "slot": 15,
+      "entry": "kernel_self_test_ethereum_address",
+      "status": "numerical_pass",
+      "evidence": [
+        "llvm21-address-checks.json"
+      ]
+    },
+    {
+      "slot": 16,
+      "entry": "kernel_self_test_bitcoin_priv",
+      "status": "numerical_pass",
+      "evidence": [
+        "llvm21-address-checks.json"
+      ]
+    },
+    {
+      "slot": 17,
+      "entry": "kernel_self_test_bitcoin_pub",
+      "status": "numerical_pass",
+      "evidence": [
+        "llvm21-address-checks.json"
+      ]
+    },
+    {
+      "slot": 18,
+      "entry": "kernel_self_test_bitcoin_pkh",
+      "status": "numerical_pass",
+      "evidence": [
+        "llvm21-address-checks.json"
+      ]
+    },
+    {
+      "slot": 19,
+      "entry": "kernel_self_test_bitcoin_encoded",
+      "status": "numerical_pass",
+      "evidence": [
+        "llvm21-address-checks.json"
+      ]
+    },
+    {
+      "slot": 20,
+      "entry": "kernel_self_test_bitcoin_matches",
+      "status": "numerical_pass",
+      "evidence": [
+        "llvm21-address-checks.json"
+      ]
+    },
+    {
+      "slot": 21,
+      "entry": "kernel_self_test_wif_compressed_mainnet",
+      "status": "numerical_pass",
+      "evidence": [
+        "llvm21-wif-checks.json"
+      ]
+    },
+    {
+      "slot": 22,
+      "entry": "kernel_self_test_wif_uncompressed_mainnet",
+      "status": "numerical_pass",
+      "evidence": [
+        "llvm21-wif-checks.json"
+      ]
+    },
+    {
+      "slot": 23,
+      "entry": "kernel_self_test_wif_compressed_testnet",
+      "status": "numerical_pass",
+      "evidence": [
+        "llvm21-wif-checks.json"
+      ]
+    },
+    {
+      "slot": 24,
+      "entry": "kernel_self_test_wif_uncompressed_testnet",
+      "status": "numerical_pass",
+      "evidence": [
+        "llvm21-wif-checks.json"
+      ]
+    },
+    {
+      "slot": 25,
+      "entry": "kernel_self_test_shallenge_hash",
+      "status": "numerical_pass",
+      "evidence": [
+        "llvm21-shallenge-checks.json"
+      ]
+    },
+    {
+      "slot": 26,
+      "entry": "kernel_self_test_shallenge_nonce_len",
+      "status": "numerical_pass",
+      "evidence": [
+        "llvm21-shallenge-checks.json"
+      ]
+    },
+    {
+      "slot": 27,
+      "entry": "kernel_self_test_shallenge_is_better",
+      "status": "numerical_pass",
+      "evidence": [
+        "llvm21-shallenge-checks.json"
+      ]
+    },
+    {
+      "slot": 28,
+      "entry": "kernel_self_test_compare_hashes_lt",
+      "status": "numerical_pass",
+      "evidence": [
+        "llvm21-hash-comparison-checks.json"
+      ]
+    },
+    {
+      "slot": 29,
+      "entry": "kernel_self_test_compare_hashes_gt",
+      "status": "numerical_pass",
+      "evidence": [
+        "llvm21-hash-comparison-checks.json"
+      ]
+    },
+    {
+      "slot": 30,
+      "entry": "kernel_self_test_compare_hashes_eq",
+      "status": "numerical_pass",
+      "evidence": [
+        "llvm21-hash-comparison-checks.json"
+      ]
+    },
+    {
+      "slot": 31,
+      "entry": "kernel_self_test_arith_u32_div_var",
+      "status": "numerical_pass",
+      "evidence": [
+        "llvm21-arithmetic-checks.json"
+      ]
+    },
+    {
+      "slot": 32,
+      "entry": "kernel_self_test_arith_u32_div_const",
+      "status": "numerical_pass",
+      "evidence": [
+        "llvm21-arithmetic-checks.json"
+      ]
+    },
+    {
+      "slot": 33,
+      "entry": "kernel_self_test_arith_u64_div_var",
+      "status": "numerical_pass",
+      "evidence": [
+        "llvm21-arithmetic-checks.json"
+      ]
+    },
+    {
+      "slot": 34,
+      "entry": "kernel_self_test_arith_u64_div_const",
+      "status": "numerical_pass",
+      "evidence": [
+        "llvm21-arithmetic-checks.json"
+      ]
+    },
+    {
+      "slot": 35,
+      "entry": "kernel_self_test_arith_u32_rem_var",
+      "status": "numerical_pass",
+      "evidence": [
+        "llvm21-arithmetic-checks.json"
+      ]
+    },
+    {
+      "slot": 36,
+      "entry": "kernel_self_test_arith_u64_rem_var",
+      "status": "numerical_pass",
+      "evidence": [
+        "llvm21-arithmetic-checks.json"
+      ]
+    },
+    {
+      "slot": 37,
+      "entry": "kernel_self_test_arith_u32_mul_lo",
+      "status": "numerical_pass",
+      "evidence": [
+        "llvm21-arithmetic-checks.json"
+      ]
+    },
+    {
+      "slot": 38,
+      "entry": "kernel_self_test_arith_u64_mul_lo",
+      "status": "numerical_pass",
+      "evidence": [
+        "llvm21-arithmetic-checks.json"
+      ]
+    },
+    {
+      "slot": 39,
+      "entry": "kernel_self_test_arith_u64_mul_hi",
+      "status": "numerical_pass",
+      "evidence": [
+        "llvm21-arithmetic-checks.json"
+      ]
+    },
+    {
+      "slot": 40,
+      "entry": "kernel_self_test_arith_u128_mul",
+      "status": "numerical_pass",
+      "evidence": [
+        "llvm21-arithmetic-checks.json"
+      ]
+    },
+    {
+      "slot": 41,
+      "entry": "kernel_self_test_base58_var_len",
+      "status": "numerical_pass",
+      "evidence": [
+        "llvm21-discarded-half.json"
+      ]
+    },
+    {
+      "slot": 42,
+      "entry": "kernel_self_test_base58_var_len_leading_zero",
+      "status": "numerical_pass",
+      "evidence": [
+        "llvm21-discarded-half.json"
+      ]
+    },
+    {
+      "slot": 43,
+      "entry": "kernel_self_test_base58_all_zeros",
+      "status": "numerical_pass",
+      "evidence": [
+        "llvm21-composed-checks.json"
+      ]
+    },
+    {
+      "slot": 44,
+      "entry": "kernel_self_test_xoroshiro_base64_nonce",
+      "status": "numerical_pass",
+      "evidence": [
+        "llvm21-composed-checks.json"
+      ]
+    },
+    {
+      "slot": 45,
+      "entry": "kernel_self_test_bech32_p2wpkh",
+      "status": "numerical_pass",
+      "evidence": [
+        "llvm21-composed-checks.json"
+      ]
+    },
+    {
+      "slot": 46,
+      "entry": "kernel_self_test_arith_overflowing_add",
+      "status": "numerical_pass",
+      "evidence": [
+        "llvm21-tier2-arithmetic-checks.json"
+      ]
+    },
+    {
+      "slot": 47,
+      "entry": "kernel_self_test_arith_overflowing_sub",
+      "status": "numerical_pass",
+      "evidence": [
+        "llvm21-tier2-arithmetic-checks.json"
+      ]
+    },
+    {
+      "slot": 48,
+      "entry": "kernel_self_test_arith_carry_chain_3limb",
+      "status": "numerical_pass",
+      "evidence": [
+        "llvm21-tier2-arithmetic-checks.json"
+      ]
+    },
+    {
+      "slot": 49,
+      "entry": "kernel_self_test_arith_widening_mul_pair",
+      "status": "numerical_pass",
+      "evidence": [
+        "llvm21-tier2-arithmetic-checks.json"
+      ]
+    },
+    {
+      "slot": 50,
+      "entry": "kernel_self_test_arith_mad_lo_u64",
+      "status": "numerical_pass",
+      "evidence": [
+        "llvm21-tier2-arithmetic-checks.json"
+      ]
+    },
+    {
+      "slot": 51,
+      "entry": "kernel_self_test_arith_mad_hi_u64",
+      "status": "numerical_pass",
+      "evidence": [
+        "llvm21-tier2-arithmetic-checks.json"
+      ]
+    },
+    {
+      "slot": 52,
+      "entry": "kernel_self_test_arith_mul_wide_u32",
+      "status": "numerical_pass",
+      "evidence": [
+        "llvm21-tier2-arithmetic-checks.json"
+      ]
+    },
+    {
+      "slot": 53,
+      "entry": "kernel_self_test_arith_mask_blend_true",
+      "status": "numerical_pass",
+      "evidence": [
+        "llvm21-tier2-arithmetic-checks.json"
+      ]
+    },
+    {
+      "slot": 54,
+      "entry": "kernel_self_test_arith_mask_blend_false",
+      "status": "numerical_pass",
+      "evidence": [
+        "llvm21-tier2-arithmetic-checks.json"
+      ]
+    },
+    {
+      "slot": 55,
+      "entry": "kernel_self_test_arith_var_shr_u64",
+      "status": "numerical_pass",
+      "evidence": [
+        "llvm21-tier2-arithmetic-checks.json"
+      ]
+    },
+    {
+      "slot": 56,
+      "entry": "kernel_self_test_arith_var_shl_u64",
+      "status": "numerical_pass",
+      "evidence": [
+        "llvm21-tier2-arithmetic-checks.json"
+      ]
+    },
+    {
+      "slot": 57,
+      "entry": "kernel_self_test_arith_blackbox_identity_u64",
+      "status": "numerical_pass",
+      "evidence": [
+        "llvm21-identity-iteration-checks.json"
+      ]
+    },
+    {
+      "slot": 58,
+      "entry": "kernel_self_test_arith_blackbox_identity_u32",
+      "status": "numerical_pass",
+      "evidence": [
+        "llvm21-identity-iteration-checks.json"
+      ]
+    },
+    {
+      "slot": 59,
+      "entry": "kernel_self_test_base58_div_by_58",
+      "status": "numerical_pass",
+      "evidence": [
+        "llvm21-identity-iteration-checks.json"
+      ]
+    },
+    {
+      "slot": 60,
+      "entry": "kernel_self_test_iter_static_table_lookup",
+      "status": "numerical_pass",
+      "evidence": [
+        "llvm21-identity-iteration-checks.json"
+      ]
+    },
+    {
+      "slot": 61,
+      "entry": "kernel_self_test_iter_mut_slice_partial",
+      "status": "numerical_pass",
+      "evidence": [
+        "llvm21-identity-iteration-checks.json"
+      ]
+    },
+    {
+      "slot": 62,
+      "entry": "kernel_self_test_iter_mut_alphabet_lookup",
+      "status": "numerical_pass",
+      "evidence": [
+        "llvm21-identity-iteration-checks.json"
+      ]
+    },
+    {
+      "slot": 63,
+      "entry": "kernel_self_test_iter_static_slice_lookup",
+      "status": "unvalidated",
+      "evidence": []
+    },
+    {
+      "slot": 64,
+      "entry": "kernel_self_test_arith_divrem_by_58_pow_5",
+      "status": "unvalidated",
+      "evidence": []
+    },
+    {
+      "slot": 65,
+      "entry": "kernel_self_test_arith_i128_chain_add",
+      "status": "unvalidated",
+      "evidence": []
+    },
+    {
+      "slot": 66,
+      "entry": "kernel_self_test_base58_limb_divrem",
+      "status": "unvalidated",
+      "evidence": []
+    },
+    {
+      "slot": 67,
+      "entry": "kernel_self_test_dynamic_index_write",
+      "status": "unvalidated",
+      "evidence": []
+    },
+    {
+      "slot": 68,
+      "entry": "kernel_self_test_arith_widening_mul_chain_3term",
+      "status": "unvalidated",
+      "evidence": []
+    },
+    {
+      "slot": 69,
+      "entry": "kernel_self_test_base58_inner_mutate_phase",
+      "status": "unvalidated",
+      "evidence": []
+    },
+    {
+      "slot": 70,
+      "entry": "kernel_self_test_dalek_clamp_integer",
+      "status": "unvalidated",
+      "evidence": []
+    },
+    {
+      "slot": 71,
+      "entry": "kernel_self_test_dalek_scalar_round_trip_one",
+      "status": "unvalidated",
+      "evidence": []
+    },
+    {
+      "slot": 72,
+      "entry": "kernel_self_test_dalek_mul_base_scalar_one",
+      "status": "unvalidated",
+      "evidence": []
+    },
+    {
+      "slot": 73,
+      "entry": "kernel_self_test_k256_secret_from_bytes_one",
+      "status": "unvalidated",
+      "evidence": []
+    },
+    {
+      "slot": 74,
+      "entry": "kernel_self_test_k256_derive_scalar_one",
+      "status": "unvalidated",
+      "evidence": []
+    },
+    {
+      "slot": 75,
+      "entry": "kernel_self_test_k256_derive_scalar_two",
+      "status": "unvalidated",
+      "evidence": []
+    },
+    {
+      "slot": 76,
+      "entry": "kernel_self_test_static_u64_array_lookup",
+      "status": "unvalidated",
+      "evidence": []
+    },
+    {
+      "slot": 77,
+      "entry": "kernel_self_test_static_struct_wrapped_u64_lookup",
+      "status": "unvalidated",
+      "evidence": []
+    },
+    {
+      "slot": 78,
+      "entry": "kernel_self_test_k256_encode_generator",
+      "status": "unvalidated",
+      "evidence": []
+    },
+    {
+      "slot": 79,
+      "entry": "kernel_self_test_k256_double_generator",
+      "status": "unvalidated",
+      "evidence": []
+    },
+    {
+      "slot": 80,
+      "entry": "kernel_self_test_k256_scalar_one_round_trip",
+      "status": "unvalidated",
+      "evidence": []
+    },
+    {
+      "slot": 81,
+      "entry": "kernel_self_test_arith_u128_imm_shr_52",
+      "status": "unvalidated",
+      "evidence": []
+    },
+    {
+      "slot": 82,
+      "entry": "kernel_self_test_static_depth4_newtype_nesting",
+      "status": "unvalidated",
+      "evidence": []
+    },
+    {
+      "slot": 83,
+      "entry": "kernel_self_test_reverse_range_write",
+      "status": "unvalidated",
+      "evidence": []
+    },
+    {
+      "slot": 84,
+      "entry": "kernel_self_test_dalek_scalar52_from_bytes",
+      "status": "unvalidated",
+      "evidence": []
+    },
+    {
+      "slot": 85,
+      "entry": "kernel_self_test_dalek_scalar52_montgomery_reduce_r",
+      "status": "unvalidated",
+      "evidence": []
+    },
+    {
+      "slot": 86,
+      "entry": "kernel_self_test_dalek_scalar52_mul_internal_then_reduce_one_r",
+      "status": "unvalidated",
+      "evidence": []
+    },
+    {
+      "slot": 87,
+      "entry": "kernel_self_test_dalek_scalar52_as_bytes_one",
+      "status": "unvalidated",
+      "evidence": []
+    },
+    {
+      "slot": 88,
+      "entry": "kernel_self_test_dalek_scalar52_sub_no_underflow",
+      "status": "unvalidated",
+      "evidence": []
+    },
+    {
+      "slot": 89,
+      "entry": "kernel_self_test_dalek_scalar52_sub_with_underflow",
+      "status": "unvalidated",
+      "evidence": []
+    },
+    {
+      "slot": 90,
+      "entry": "kernel_self_test_dalek_scalar52_montgomery_reduce_with_sub",
+      "status": "unvalidated",
+      "evidence": []
+    },
+    {
+      "slot": 91,
+      "entry": "kernel_self_test_index_trait_dispatch",
+      "status": "unvalidated",
+      "evidence": []
+    },
+    {
+      "slot": 92,
+      "entry": "kernel_self_test_dalek_scalar_one_to_bytes_direct",
+      "status": "unvalidated",
+      "evidence": []
+    },
+    {
+      "slot": 93,
+      "entry": "kernel_self_test_k256_affine_generator_encode",
+      "status": "unvalidated",
+      "evidence": []
+    },
+    {
+      "slot": 94,
+      "entry": "kernel_self_test_subtle_choice_u8_into_bool",
+      "status": "unvalidated",
+      "evidence": []
+    },
+    {
+      "slot": 95,
+      "entry": "kernel_self_test_subtle_conditional_select_u64",
+      "status": "unvalidated",
+      "evidence": []
+    },
+    {
+      "slot": 96,
+      "entry": "kernel_self_test_k256_encoded_point_from_affine_coords",
+      "status": "unvalidated",
+      "evidence": []
+    },
+    {
+      "slot": 97,
+      "entry": "kernel_self_test_index_trait_const_indices",
+      "status": "unvalidated",
+      "evidence": []
+    },
+    {
+      "slot": 98,
+      "entry": "kernel_self_test_generic_array_basic_index",
+      "status": "unvalidated",
+      "evidence": []
+    },
+    {
+      "slot": 99,
+      "entry": "kernel_self_test_generic_array_copy_from_slice",
+      "status": "unvalidated",
+      "evidence": []
+    },
+    {
+      "slot": 100,
+      "entry": "kernel_self_test_from_affine_coords_replica",
+      "status": "unvalidated",
+      "evidence": []
+    },
+    {
+      "slot": 101,
+      "entry": "kernel_self_test_generic_array_as_slice_last",
+      "status": "unvalidated",
+      "evidence": []
+    },
+    {
+      "slot": 102,
+      "entry": "kernel_self_test_dalek_scalar_round_trip_zero",
+      "status": "unvalidated",
+      "evidence": []
+    },
+    {
+      "slot": 103,
+      "entry": "kernel_self_test_dalek_scalar_from_bytes_wide_zero",
+      "status": "unvalidated",
+      "evidence": []
+    },
+    {
+      "slot": 104,
+      "entry": "kernel_self_test_field_bytes_into_conversion",
+      "status": "unvalidated",
+      "evidence": []
+    },
+    {
+      "slot": 105,
+      "entry": "kernel_self_test_base58_min_nonzero",
+      "status": "unvalidated",
+      "evidence": []
+    },
+    {
+      "slot": 106,
+      "entry": "kernel_self_test_named_field_struct_return",
+      "status": "unvalidated",
+      "evidence": []
+    },
+    {
+      "slot": 107,
+      "entry": "kernel_self_test_base58_handrolled_no_seq",
+      "status": "unvalidated",
+      "evidence": []
+    },
+    {
+      "slot": 108,
+      "entry": "kernel_self_test_slice_reverse_partial",
+      "status": "unvalidated",
+      "evidence": []
+    },
+    {
+      "slot": 109,
+      "entry": "kernel_self_test_dalek_scalar_eq_zero",
+      "status": "unvalidated",
+      "evidence": []
+    },
+    {
+      "slot": 110,
+      "entry": "kernel_self_test_generic_array_copy_from_ga_source",
+      "status": "unvalidated",
+      "evidence": []
+    },
+    {
+      "slot": 111,
+      "entry": "kernel_self_test_dalek_zero_eq_zero",
+      "status": "unvalidated",
+      "evidence": []
+    },
+    {
+      "slot": 112,
+      "entry": "kernel_self_test_dalek_from_canonical_zero",
+      "status": "unvalidated",
+      "evidence": []
+    },
+    {
+      "slot": 113,
+      "entry": "kernel_self_test_dalek_scalar52_from_bytes_zero",
+      "status": "unvalidated",
+      "evidence": []
+    },
+    {
+      "slot": 114,
+      "entry": "kernel_self_test_dalek_scalar52_mul_internal_zero",
+      "status": "unvalidated",
+      "evidence": []
+    },
+    {
+      "slot": 115,
+      "entry": "kernel_self_test_dalek_scalar52_montgomery_reduce_zero",
+      "status": "unvalidated",
+      "evidence": []
+    },
+    {
+      "slot": 116,
+      "entry": "kernel_self_test_dalek_scalar52_as_bytes_zero",
+      "status": "unvalidated",
+      "evidence": []
+    },
+    {
+      "slot": 117,
+      "entry": "kernel_self_test_dalek_reduce_pipeline_zero",
+      "status": "unvalidated",
+      "evidence": []
+    }
+  ]
+}

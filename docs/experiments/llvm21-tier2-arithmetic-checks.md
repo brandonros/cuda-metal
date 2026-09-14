@@ -60,3 +60,6 @@ python3 demos/rust-ptx/run_self_test.py "$OUT.metal" \
 Imports were bounded at 600 seconds and runtime attempts at 300 seconds.
 Local modules, ABI sidecars and logs: `/tmp/llvm21-tier2-validation`.
 Next bounded batch: identity and Base58/iteration checks, slots 57–62.
+
+Follow-up: [all six identity/Base58/iteration checks pass](llvm21-identity-iteration-checks.md);
+[the complete inventory lists everything still unvalidated](llvm21-validation-inventory.md).

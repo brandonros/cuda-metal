@@ -13,7 +13,10 @@ individually on M5, with other slots and guards intact.
 [The discarded-half proof now unblocks slots 41–42](llvm21-discarded-half.md),
 so all five composed fixtures (41–45) have passed individually.
 [All eleven tier-2 arithmetic checks, slots 46–56, also pass](llvm21-tier2-arithmetic-checks.md).
-Next bounded batch: identity and Base58/iteration checks, slots 57–62.
+[All six identity/Base58/iteration checks, slots 57–62, also pass](llvm21-identity-iteration-checks.md).
+[Complete inventory: 54/118 recorded passes; 64 unvalidated; four mining kernels pending](llvm21-validation-inventory.md).
+These are cumulative passes across revisions, not a single final-build sweep.
+Next: fill the early gaps (0, 3, 6–12), then slots 63–117.
 No complete LLVM 21 suite or mining validation is claimed.
 
 Goal: run all vanity-miner self-tests and all four mining kernels correctly on
