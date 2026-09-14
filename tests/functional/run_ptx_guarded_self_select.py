@@ -7,14 +7,17 @@ import subprocess
 import sys
 import tempfile
 
+DISCARDED_HALF = '--discarded-half' in sys.argv or '--discarded-half-low' in sys.argv
 GUARDED_LOAD = '--guarded-load' in sys.argv
-KERNEL = 'guarded_load' if GUARDED_LOAD else 'guarded_select'
+KERNEL = 'discarded_half' if DISCARDED_HALF else 'guarded_load' if GUARDED_LOAD else 'guarded_select'
 BOUNDED = '--bounded' in sys.argv
 FIXTURE = 'ptx_guarded_self_select.ptx'
 if GUARDED_LOAD:
     FIXTURE = 'ptx_guarded_load.ptx'
 elif BOUNDED:
     FIXTURE = 'ptx_bounded_self_select.ptx'
+if DISCARDED_HALF:
+    FIXTURE = 'ptx_discarded_half_low.ptx' if '--discarded-half-low' in sys.argv else 'ptx_discarded_half.ptx'
 PTX = (Path(__file__).parent / 'reference' / FIXTURE).read_text()
 
 def main():
@@ -37,7 +40,9 @@ def main():
     source = (u32 * count)(*values)
     expected = []
     for value in values:
-        if GUARDED_LOAD:
+        if DISCARDED_HALF:
+            expected.append(value)
+        elif GUARDED_LOAD:
             expected.append((value + 1) & 0xffffffff if value & 1 and value >= 8 else 99)
         else:
             indices = range(value & 7, 4) if BOUNDED else range(value & 7)

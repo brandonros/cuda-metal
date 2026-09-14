@@ -1,0 +1,27 @@
+.version 7.1
+.target sm_80
+.address_size 64
+.visible .entry discarded_half(.param .u64 input, .param .u64 output, .param .u32 count) {
+.reg .b64 %rd<8>;
+.reg .b32 %r<10>;
+.reg .pred %p1;
+ld.param.u64 %rd1, [input];
+ld.param.u64 %rd2, [output];
+ld.param.u32 %r1, [count];
+mov.u32 %r2, %ctaid.x;
+mov.u32 %r3, %ntid.x;
+mov.u32 %r4, %tid.x;
+mad.lo.u32 %r2, %r2, %r3, %r4;
+setp.ge.u32 %p1, %r2, %r1;
+@%p1 bra DONE;
+mul.wide.u32 %rd3, %r2, 4;
+add.u64 %rd4, %rd1, %rd3;
+add.u64 %rd5, %rd2, %rd3;
+ld.global.u32 %r5, [%rd4];
+mov.b64 %rd6, {%r5, %r6};
+add.u32 %r7, %r5, 3;
+mov.b64 {%r8, _}, %rd6;
+st.global.u32 [%rd5], %r8;
+DONE:
+ret;
+}

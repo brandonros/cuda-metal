@@ -2901,6 +2901,10 @@ if(APPLE)
         COMMAND python3 ${CMAKE_CURRENT_SOURCE_DIR}/run_ptx_dead_pointer_cast.py ${CMAKE_BINARY_DIR})
     add_test(NAME functional_ptx_integer_minmax
         COMMAND python3 ${CMAKE_CURRENT_SOURCE_DIR}/run_ptx_integer_minmax.py ${CMAKE_BINARY_DIR})
+    add_test(NAME functional_ptx_discarded_half
+        COMMAND python3 ${CMAKE_CURRENT_SOURCE_DIR}/run_ptx_guarded_self_select.py ${CMAKE_BINARY_DIR} --discarded-half)
+    add_test(NAME functional_ptx_discarded_half_low
+        COMMAND python3 ${CMAKE_CURRENT_SOURCE_DIR}/run_ptx_guarded_self_select.py ${CMAKE_BINARY_DIR} --discarded-half-low)
     add_test(NAME functional_ptx_guarded_load
         COMMAND python3 ${CMAKE_CURRENT_SOURCE_DIR}/run_ptx_guarded_self_select.py ${CMAKE_BINARY_DIR} --guarded-load)
     add_test(NAME functional_ptx_bounded_self_select
