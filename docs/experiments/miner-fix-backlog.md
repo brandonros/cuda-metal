@@ -515,3 +515,12 @@ No compiler changes were needed. Selected slots equal 1; other slots and 16 guar
 remain intact. [Evidence and scope](llvm21-arithmetic-checks.md).
 PTX is unchanged. Next bounded batch: composed-primitive checks (41–45).
 Full-suite and mining validation remain incomplete.
+
+## LLVM 21 composed primitives
+
+At `1e3c01e`, slots 43–45 pass on M5 with result and guard checks. Slots 41–42
+fail import on an undefined low half packed into a value whose only consumer
+extracts the high half. Compiler/runtime/PTX hashes and branch commit remained
+unchanged throughout validation. [Evidence and next proof](llvm21-composed-checks.md).
+Next: regression-tested discarded-half handling before SSA; original PTX stays
+unchanged. Full-suite and mining validation remain incomplete.

@@ -1,0 +1,113 @@
+{
+  "commit": "1e3c01ea82c5e0c3645a9cff8d5ff6955921556e",
+  "ptx": {
+    "path": "/Users/brandon/Downloads/vanity-miner-aarch64-llvm21/output-llvm21.ptx",
+    "bytes": 25161784,
+    "sha256": "2840485fe193d39cfdbb2e5babd25f6772a08a2550843c20b3beba5a26185f4b"
+  },
+  "compiler": {
+    "path": "/Users/brandon/Desktop/gpu/cuda-metal/build-rust-ptx-apple/cumetalc",
+    "bytes": 3220992,
+    "sha256": "4c5c932658a5b3eab8ea0ff5a6d7d5c9d084b8ecca9120ff15457bb16908805b"
+  },
+  "runtime": {
+    "path": "/Users/brandon/Desktop/gpu/cuda-metal/build-rust-ptx-apple/libcumetal.dylib",
+    "bytes": 5004992,
+    "sha256": "6e41295ad0d934f15b70bfa7d12a9c93b74f5852d947e07eff130d78a824f30f"
+  },
+  "results": [
+    {
+      "slot": 41,
+      "entry": "kernel_self_test_base58_var_len",
+      "compile": {
+        "exit_code": 1,
+        "host_seconds": 59.979,
+        "log": "cumetalc failed: PTX register '%r100' is undefined on an incoming edge to block '$L__BB37_1'\n"
+      },
+      "outcome": "import_failure"
+    },
+    {
+      "slot": 42,
+      "entry": "kernel_self_test_base58_var_len_leading_zero",
+      "compile": {
+        "exit_code": 1,
+        "host_seconds": 60.745,
+        "log": "cumetalc failed: PTX register '%r116' is undefined on an incoming edge to block '$L__BB38_1'\n"
+      },
+      "outcome": "import_failure"
+    },
+    {
+      "slot": 43,
+      "entry": "kernel_self_test_base58_all_zeros",
+      "compile": {
+        "exit_code": 0,
+        "host_seconds": 74.664,
+        "log": "wrote \"/tmp/llvm21-composed-validation/kernel_self_test_base58_all_zeros.metal\"\n"
+      },
+      "metal": {
+        "path": "/private/tmp/llvm21-composed-validation/kernel_self_test_base58_all_zeros.metal",
+        "bytes": 954977,
+        "sha256": "859756512f3316dada5a2625a31fff4d4e17f4dcb249d5ab7afaeb14e37d6fa3"
+      },
+      "runtime": {
+        "exit_code": 0,
+        "host_seconds": 13.803,
+        "log": "CUMETAL_PROVENANCE event=kernel_launch kernel=\"kernel_self_test_base58_all_zeros\" source=generic_ptx provenance=generic_ptx_lowering semantic_quality=exact device=apple_gpu device_name=\"Apple M5\" math_mode=safe compile_cache_hit=false launch_success=true duration_ns=177208 grid=(1,1,1) block=(1,1,1) unsupported_reason=\"\"\nNUMERICAL_PASS kernel=kernel_self_test_base58_all_zeros slot=43 actual=1 expected=1; other 117 slots and 16 guard words intact\n"
+      },
+      "outcome": "numerical_pass",
+      "gpu_duration_ns": 177208
+    },
+    {
+      "slot": 44,
+      "entry": "kernel_self_test_xoroshiro_base64_nonce",
+      "compile": {
+        "exit_code": 0,
+        "host_seconds": 85.78,
+        "log": "wrote \"/tmp/llvm21-composed-validation/kernel_self_test_xoroshiro_base64_nonce.metal\"\n"
+      },
+      "metal": {
+        "path": "/private/tmp/llvm21-composed-validation/kernel_self_test_xoroshiro_base64_nonce.metal",
+        "bytes": 70969,
+        "sha256": "fe1dda5d1fe8843ced3f13182a3237eb8b7bc5db3c19f17019d05281141d9a7a"
+      },
+      "runtime": {
+        "exit_code": 0,
+        "host_seconds": 0.369,
+        "log": "CUMETAL_PROVENANCE event=kernel_launch kernel=\"kernel_self_test_xoroshiro_base64_nonce\" source=generic_ptx provenance=generic_ptx_lowering semantic_quality=exact device=apple_gpu device_name=\"Apple M5\" math_mode=safe compile_cache_hit=false launch_success=true duration_ns=1499 grid=(1,1,1) block=(1,1,1) unsupported_reason=\"\"\nNUMERICAL_PASS kernel=kernel_self_test_xoroshiro_base64_nonce slot=44 actual=1 expected=1; other 117 slots and 16 guard words intact\n"
+      },
+      "outcome": "numerical_pass",
+      "gpu_duration_ns": 1499
+    },
+    {
+      "slot": 45,
+      "entry": "kernel_self_test_bech32_p2wpkh",
+      "compile": {
+        "exit_code": 0,
+        "host_seconds": 90.912,
+        "log": "wrote \"/tmp/llvm21-composed-validation/kernel_self_test_bech32_p2wpkh.metal\"\n"
+      },
+      "metal": {
+        "path": "/private/tmp/llvm21-composed-validation/kernel_self_test_bech32_p2wpkh.metal",
+        "bytes": 303506,
+        "sha256": "aa8e7d5df9235e0049b397f24afab099a40ec2ad2e1fd69d2984dae4b7f7bab8"
+      },
+      "runtime": {
+        "exit_code": 0,
+        "host_seconds": 0.673,
+        "log": "CUMETAL_PROVENANCE event=kernel_launch kernel=\"kernel_self_test_bech32_p2wpkh\" source=generic_ptx provenance=generic_ptx_lowering semantic_quality=exact device=apple_gpu device_name=\"Apple M5\" math_mode=safe compile_cache_hit=false launch_success=true duration_ns=58500 grid=(1,1,1) block=(1,1,1) unsupported_reason=\"\"\nNUMERICAL_PASS kernel=kernel_self_test_bech32_p2wpkh slot=45 actual=1 expected=1; other 117 slots and 16 guard words intact\n"
+      },
+      "outcome": "numerical_pass",
+      "gpu_duration_ns": 58500
+    }
+  ],
+  "ptx_modified": false,
+  "metal_instrumented": false,
+  "workload_specializations": false,
+  "device": "Apple M5",
+  "compile_workers": 2,
+  "gpu_launches": "sequential",
+  "compile_timeout_seconds": 600,
+  "runtime_timeout_seconds": 300,
+  "end_hashes_match_start": true,
+  "end_commit_matches_start": true
+}

@@ -55,3 +55,5 @@ Imports were bounded at 600 seconds; runtime attempts at 300 seconds.
 Local modules, ABI sidecars, and logs: `/tmp/llvm21-arithmetic-validation`.
 Next bounded batch: composed-primitive checks, slots 41–45.
 Historical LLVM 7/19 totals are unchanged.
+
+Follow-up: [composed-primitive results and the next shared blocker](llvm21-composed-checks.md).
