@@ -534,3 +534,12 @@ six targeted GPU regression tests pass, including 131,082 new runtime inputs.
 [Proof, negative coverage, and evidence](llvm21-discarded-half.md). PTX is unchanged.
 Next bounded batch: tier-2 arithmetic (46–56); full-suite/mining validation remains
 incomplete.
+
+## LLVM 21 tier-2 arithmetic validation
+
+All eleven checks (46–56) compile and numerically pass on M5 at `0c9d89b`.
+Selected slots equal 1; other slots and 16 guards remain intact. No compiler
+changes were needed, and the branch/compiler/runtime/PTX hashes stayed unchanged.
+[Evidence and fixed-fixture scope](llvm21-tier2-arithmetic-checks.md).
+Next bounded batch: identity and Base58/iteration checks (57–62). Full-suite and
+mining validation remain incomplete.

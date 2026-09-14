@@ -82,3 +82,5 @@ workers with 600-second timeouts; runtime attempts were sequential with
 300-second timeouts. Host timings include compilation/setup and are distinct
 from GPU timings.
 Next bounded batch: tier-2 arithmetic checks, slots 46–56.
+
+Follow-up: [all eleven LLVM 21 tier-2 arithmetic checks now pass](llvm21-tier2-arithmetic-checks.md).
